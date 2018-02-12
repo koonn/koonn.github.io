@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>KOONN</title>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2018-02-13T00:37:15+09:00</updated>
+ <id>http://localhost:4000</id>
+ <author>
+   <name>koonn</name>
+   <email>konnie211@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>magrittrの関数たち</title>
+   <link href="http://localhost:4000/2018-02-11-magrittr_func/"/>
+   <updated>2018-02-11T00:00:00+09:00</updated>
+   <id>http://localhost:4000/magrittr_func</id>
+   <content type="html">&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;magrittr&lt;/code&gt;パイプ演算子以外にも、パイプをつなぐために便利な関数が用意されてます。
+それらを調べてみました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cran.r-project.org/web/packages/magrittr/magrittr.pdf&quot;&gt;vignette&lt;/a&gt;をみてみると、以下の関数が用意されています。それぞれの変数は、‘‘で囲まれた演算の代用をすることができます。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;コマンド&lt;/th&gt;
+      &lt;th&gt;対応する演算子&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;extract&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘[‘&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;extract2&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘[[‘&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;inset&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘[&amp;lt;–‘&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;inset2&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘[[&amp;lt;–‘&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;use_series&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘$‘&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘+‘&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;subtract&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘-‘&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;multiply_by&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘*‘&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;raise_to_power&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘^‘&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;multiply_by_matrix&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘%*%‘&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;divide_by&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘/‘&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;divide_by_int&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘%/%‘&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mod&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘%%‘&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;is_in&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘%in%‘&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;and&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘&amp;amp;‘&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;or&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘|‘&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;equals&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘==‘&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;is_greater_than&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘&amp;gt;‘&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;is_weakly_greater_than&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘&amp;gt;=‘&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;is_less_than&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘&amp;lt;‘&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;is_weakly_less_than&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘&amp;lt;=‘&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;not (‘n’est pas‘)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘!‘&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;set_colnames&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘colnames&amp;lt;–‘&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;set_rownames&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘rownames&amp;lt;–‘&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;set_names&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘names&amp;lt;–‘&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;各関数のメモ&quot;&gt;各関数のメモ&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;データの抽出代入&quot;&gt;データの抽出、代入&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;extract&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;extract2&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;リストやデータフレームの要素を抽出する。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;inset&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;inset2&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;リストやデータフレームに要素を代入する。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;use_series&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;リストやデータフレームから要素をベクトル抽出する。&lt;/p&gt;
+
+&lt;h3 id=&quot;算術演算子&quot;&gt;算術演算子&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;加算。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;subtract&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;減算。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;multiply_by&lt;/code&gt;  &lt;code class=&quot;highlighter-rouge&quot;&gt;multiply_by_matrix&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;乗算。後者は行列積の演算をする。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;raise_to_power&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;べき乗。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;divide_by&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;divide_by_int&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;除算。後者は整数商を返す。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mod&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;剰余演算。&lt;/p&gt;
+
+&lt;h3 id=&quot;比較演算子論理演算子&quot;&gt;比較演算子、論理演算子&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;is_in&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;要素が含まれるかどうかを判定。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;and&lt;/code&gt;　　&lt;/p&gt;
+
+&lt;p&gt;演算子&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt;と同等。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;or&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;演算子&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;と同等。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;equals&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;演算子&lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt;と同等。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;is_greater_than&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;演算子&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt;と同等。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;is_weakly_greater_than&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;演算子&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;=&lt;/code&gt;と同等。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;is_less_than&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;演算子&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&lt;/code&gt;と同等。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;is_weakly_less_than&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;演算子&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;=&lt;/code&gt;と同等。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;not&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;演算子&lt;code class=&quot;highlighter-rouge&quot;&gt;!&lt;/code&gt;と同等。&lt;/p&gt;
+
+&lt;h3 id=&quot;名前の変更&quot;&gt;名前の変更&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;set_colnames&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;列の名前を変更する。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; # データセットの作成
+ &amp;gt; df = data.frame(matrix(rnorm(10), nrow=5))
+ &amp;gt; df
+            X1         X2
+ 1 -0.45881978  0.1070585
+ 2  0.17728293 -0.2522486
+ 3  0.02923236  0.4124346
+ 4  0.32051567  0.6691685
+ 5  1.20671981  0.4406586
+
+ &amp;gt; df %&amp;gt;% set_colnames(c('A','B'))
+             A          B
+ 1 -0.45881978  0.1070585
+ 2  0.17728293 -0.2522486
+ 3  0.02923236  0.4124346
+ 4  0.32051567  0.6691685
+ 5  1.20671981  0.4406586
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;set_rownames&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;行の名前を変更する。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &amp;gt; df %&amp;gt;% set_rownames(c('a','b','c','d','e'))
+            X1         X2
+ a -0.45881978  0.1070585
+ b  0.17728293 -0.2522486
+ c  0.02923236  0.4124346
+ d  0.32051567  0.6691685
+ e  1.20671981  0.4406586
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;set_names&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;ベクトルの要素名を変更する。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &amp;gt; df %$% set_names(X1,letters[1:5])
+            a          b          c          d          e
+  -0.45881978 0.17728293 0.02923236 0.32051567 1.20671981
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</content>
+ </entry>
+ 
+
+</feed>
