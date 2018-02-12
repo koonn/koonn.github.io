@@ -1,6 +1,6 @@
-の代替---
+---
 layout: post
-title: magrittrの関数たち
+title: magrittrの関数
 tags:
   - R
   - magrittr
